@@ -17,5 +17,5 @@ return {
                 vim.snippet.expand(args.body)
             end,
         },
-    }
+    },
 }
