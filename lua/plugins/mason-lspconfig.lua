@@ -5,7 +5,7 @@ return {
     },
     opts = {
         ensure_installed = {
-            'pylyzer',
+            'pylsp',
         },
         handlers = {
             function(server_name)
