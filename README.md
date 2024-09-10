@@ -11,7 +11,9 @@ Run: `sudo apt-get install ripgrep`
 3. Add its path to `PATH` in `.bashrc` file. Example: `export PATH=$HOME/nvim-linux64/bin:$PATH`
 4. Run: `source .bashrc`
 5. Navigate to `~/.config`
-6. Run: `git clone https://github.com/mbezrukyi/nvim.git`
+    - Run: `git clone https://github.com/mbezrukyi/nvim.git`
+    - Run: `nvim nvim/`
+    - Run: `:MasonInstall black`
 
 ---
 
