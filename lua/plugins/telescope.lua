@@ -4,9 +4,23 @@ return {
     dependencies = {
         'nvim-lua/plenary.nvim',
     },
-    keys = {
-        {"<leader>pf", require('telescope.builtin').find_files, desc = "Explore Files"},
-        {"<C-p>", require('telescope.builtin').git_files, desc = "Explore Git Files"},
-        {"<leader>ps", require('telescope.builtin').grep_string, desc = "Explore Files by String"},
-    },
+    config = function()
+        local builtin = require('telescope.builtin')
+
+        vim.keymap.set('n', '<leader>pf', function() 
+            builtin.find_files({
+                hidden = true,
+                no_ignore = true
+            })
+        end, {})
+        vim.keymap.set('n', '<leader>ps', function () 
+            builtin.grep_string({
+                search = vim.fn.input('Grep > '),
+                additional_args = {
+                    '--hidden',
+                    '--no-ignore',
+                },
+            }) 
+        end, {})
+    end,
 }
