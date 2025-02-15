@@ -3,6 +3,7 @@ return {
     branch = 'v4.x',
     priority = 1000,
     dependencies = { 
+        'neovim/nvim-lspconfig',
         'hrsh7th/cmp-nvim-lsp',
     },
     config = function()
