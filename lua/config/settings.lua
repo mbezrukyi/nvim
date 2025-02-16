@@ -18,3 +18,5 @@ vim.opt.wrap = false
 vim.opt.termguicolors = true
 
 vim.g.netrw_banner = 0
+
+vim.opt.signcolumn = 'yes'
