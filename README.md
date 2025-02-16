@@ -13,8 +13,8 @@ Run: `sudo apt-get install ripgrep`
 5. Navigate to `~/.config`
     - Run: `git clone https://github.com/mbezrukyi/nvim.git`
     - Run: `nvim nvim/`
-    - Run: `:MasonInstall black`
+6. Install desired lsp/formatters/linters: `:Mason`
 
 ---
 
-**Done!**
+__Done!__
