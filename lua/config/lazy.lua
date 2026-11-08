@@ -21,6 +21,13 @@ require('lazy').setup({
         },
     },
     checker = {
-        enabled = true,
+        enabled = false,
     },
+})
+
+vim.api.nvim_create_autocmd('User', {
+    pattern = 'VeryLazy',
+    callback = function()
+        require('lazy').update({ show = false })
+    end,
 })
