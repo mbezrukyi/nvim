@@ -48,17 +48,20 @@ vim.pack.add({
 
 vim.cmd.colorscheme('tokyonight')
 
+require('telescope').setup({
+    defaults = {
+        file_ignore_patterns = { '^%.git/' },
+    },
+    pickers = {
+        find_files = { hidden = true },
+        live_grep = { additional_args = { '--hidden' } },
+    },
+})
+
 local telescope = require('telescope.builtin')
 
-vim.keymap.set('n', '<leader>pf', function()
-    telescope.find_files({ hidden = true, no_ignore = true })
-end)
-vim.keymap.set('n', '<leader>ps', function()
-    telescope.grep_string({
-        search = vim.fn.input('Grep > '),
-        additional_args = { '--hidden', '--no-ignore' },
-    })
-end)
+vim.keymap.set('n', '<leader>pf', telescope.find_files)
+vim.keymap.set('n', '<leader>ps', telescope.live_grep)
 
 require('mason').setup()
 
