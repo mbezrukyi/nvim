@@ -65,7 +65,7 @@ vim.keymap.set('n', '<leader>ps', telescope.live_grep)
 
 require('mason').setup()
 
-vim.lsp.enable({ 'pylsp' })
+vim.lsp.enable({ 'pylsp', 'rust_analyzer' })
 
 vim.opt.autocomplete = true
 vim.opt.complete = 'o'
